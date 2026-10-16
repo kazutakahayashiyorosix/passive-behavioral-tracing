@@ -24,3 +24,13 @@ All data are simulated from the model in Section 4.7 of the paper; no platform d
 
 ## License
 Code: MIT. See `LICENSE`.
+
+## Comparative and public-data evaluation (v2)
+
+```
+python3 pbt_applied.py /path/to/pizza_request_dataset.json   # Part A baselines + benign shifts -> results/applied_results.json
+python3 pbt_raop.py    /path/to/pizza_request_dataset.json   # Part B Random Acts of Pizza, phase I/II -> results/raop_pbt_results.json
+```
+
+The Random Acts of Pizza dataset (Althoff, Danescu-Niculescu-Mizil & Jurafsky, ICWSM 2014) is not redistributed here; obtain it from its authors.
+Note: `results/applied_results.json` part B is a superseded first design (two-sided CUSUM, four-interval reference); the reported public-log results are in `results/raop_pbt_results.json`.
